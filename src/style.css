@@ -1,0 +1,67 @@
+.contact-card-wrapper {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-card-header {
+    background-color: #2e8b57;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .contact-card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .contact-card-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover; 
+  }
+  
+  .contact-card-info {
+    flex: 1;
+  }
+  
+  .contact-card-name h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  .contact-card-details p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+  
+  .contact-card-details span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-card-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-card-image {
+      margin: 0 auto 10px;
+    }
+  }
+  

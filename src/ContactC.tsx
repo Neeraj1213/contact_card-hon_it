@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './style.css';
 
 interface Name {
   title: string;
@@ -38,12 +39,23 @@ const ContactCard: React.FC = () => {
 
   return (
     user && (
-      <div className="contact-card">
-        <img src={user.picture.large} alt={`${user.name.first} ${user.name.last}`} />
-        <h2>{`${user.name.title} ${user.name.first} ${user.name.last}`}</h2>
-        <p>Email: {user.email}</p>
-        <p>Phone: {user.phone}</p>
-        <p>Age: {user.dob.age}</p>
+      <div className="contact-card-container">
+        <div className="contact-card">
+          <div className="contact-card-header">Contact Card</div>
+          <div className="contact-card-info">
+            <div className="contact-card-details">
+            <div className="contact-card-image">
+              <img src={user.picture.large} alt={`${user.name.first} ${user.name.last}`} />
+            </div>
+              <p><strong>Title:</strong> {user.name.title}</p>
+              <p><strong>First Name:</strong> {user.name.first}</p>
+              <p><strong>Last Name:</strong> {user.name.last}</p>
+              <p><strong>Phone:</strong> {user.phone}</p>
+              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Age:</strong> {user.dob.age}</p>
+            </div>
+          </div>
+        </div>
       </div>
     )
   );
